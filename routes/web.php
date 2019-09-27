@@ -13,13 +13,13 @@
 
 use App\Product;
 
-Route::get('/home', 'PageController@index');
+Route::get('/', 'PageController@index');
 
 Route::get('/createproduct', function () {
     $post = Product::create([
         'category' => 'Shirt/Polo',
         'product_name' => 'Revolt Factory ',
-        'product_detail' => 'this is t-shirt with best quality materials',
+        'product_detail' => 'This is t-shirt with best quality materials',
         'product_photo' => 'rvlt.jpg'
     ]);
 
@@ -37,3 +37,21 @@ Route::get('/showproduct', function () {
 // });
 
 Route::resource('/feedback', 'FeedbackController');
+Auth::routes();
+
+// Route::get('/', 'HomeController@index')->name('home');
+
+
+Route::group(['prefix' => '/6661/admin', 'middleware'=> 'auth'], function() {
+    
+    Route::resource('home', 'HomeController');
+
+    Route::resource('feedback', 'adminController\FeedbackController')->only([
+        'index', 'destroy'
+    ]);
+
+    Route::resource('profile', 'adminController\ProfileController')->only([
+        'index', 'edit', 'update'
+    ]);
+    
+});

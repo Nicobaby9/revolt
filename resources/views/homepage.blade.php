@@ -189,6 +189,7 @@
       </form>
     </div>
     </div>
+    
     <div id="dropDownSelect1"></div>
     
     <script src="{{ asset('Front-End/Form/vendor/jquery/jquery-3.2.1.min.js') }}" type="635466b07daeec02b4a105d5-text/javascript"></script>
@@ -232,13 +233,13 @@
       <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
         <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
         <div>
-          <a href="https://api.whatsapp.com/send?phone=+6287837998122&text=Halo gan, apa kabar?"  target="_blank">+62 8783-7998-122</a>
+          <a href="https://wa.me/+6282136633826/?text=urlencodedtext" target="_blank">+62 8783-7998-122</a>
         </div>
       </div>
       <div class="col-lg-4 mr-auto text-center">
         <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
         <!-- Make sure to change the email address in anchor text AND the link below! -->
-        <a class="d-block" href="http://gmail.com"  target="_blank">nosvengeance@gmail.com</a>
+        <a class="d-block" href="http://gmail.com" target="_blank">revolthead@gmail.com</a>
       </div>
     </div>
   </div>
