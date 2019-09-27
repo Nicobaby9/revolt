@@ -19,6 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('role')->default('Admin');
+            $table->string('description')->default('Entrepreneur');
+            $table->string('instagram')->default('www.instagram.com');
+            $table->string('facebook')->default('www.facebook.com');
+            $table->string('github')->default('www.github.com');
+            $table->string('no_handphone')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
