@@ -152,7 +152,7 @@
 <section class="rvlt-print" id="section-bg-order">
     {{--  //<h2 class="mb-4">Check Out the Catalog on Instagram</h2>  --}}
     {{--  //<a class="btn btn-light btn-xl" href="https://www.instagram.com/yudho.alfantyo"  target="_blank">Follow Me on Instagram!</a>  --}}
-    {{-- //<img src="{{ asset('Front-End/img/portfolio/fullsize/rvlt-order.png') }}"> --}}
+    {{--  //<img src="{{ asset('Front-End/img/portfolio/fullsize/rvlt-order.png') }}"> --}}
 </section>
 
 {{-- FEEDBACK --}}
@@ -176,7 +176,7 @@
         </div>
         <div class="wrap-input100 validate-input" data-validate="Please enter your message">
           <textarea class="input100" name="message" placeholder="Your Message" required></textarea>
-          <span class="focus-input100"></span>
+          <span class="focus-input100"></span>  
         </div>
         <div class="container-contact100-form-btn">
           <button class="contact100-form-btn" type="submit" value="Post">

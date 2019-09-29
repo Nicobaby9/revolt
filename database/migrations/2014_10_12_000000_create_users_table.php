@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('facebook')->default('www.facebook.com');
             $table->string('github')->default('www.github.com');
             $table->string('no_handphone')->nullable();
+            $table->string('photo')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
