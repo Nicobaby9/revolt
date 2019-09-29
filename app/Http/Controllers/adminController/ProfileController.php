@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\adminController;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('admin.profile.index');
+        $profiles = User::all()->first();
+        return view('admin.profile.index', compact('profiles'));
     }
 
     /**
@@ -69,7 +71,10 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $profiles = User::findOrFail($id);
+        $profiles->update($request->all());
+
+        return redirect()->back();
     }
 
     /**
