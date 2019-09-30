@@ -62,7 +62,7 @@ use App\User;
                     <b>Phone</b> <a class="float-right">{{ auth()->user()->no_handphone }}</a>
                 </li>
                 </ul>
-                <a class="btn btn-primary btn-block"><b>       <br>  </b></a>
+                <a class="btn btn-primary btn-block"><b>{{ auth()->user()->role }} </b></a>
             </div>
             <!-- /.card-body -->
             </div>
@@ -76,17 +76,14 @@ use App\User;
                 <ul class="nav nav-pills">
                     
                 <li class="nav-item"><a class="nav-link active" href="#detail" data-toggle="tab">Detail</a></li>
-                <li class="nav-item"><a class="nav-link " href="#settings" data-toggle="tab">Settings</a></li>
-                
-                {{-- <li class="active"><a href="#activity" data-toggle="tab" href="#detail">Detail</a></li>
-                <li><a href="#settings" data-toggle="tab">Settings</a></li> --}}
+                <li class="nav-item"><a class="nav-link " href="#edit" data-toggle="tab">Edit</a></li>
                 </ul>
             </div>
             <div class="card-body">
                 <div class="tab-content">
 
                 <div class="active tab-pane active" id="detail">
-                    <form class="form-horizontal" method="POST" action="{{ route('profile.update', $profiles->id) }}">
+                    <form class="form-horizontal" method="POST">
                     @csrf
                     {{ method_field('PATCH') }}
                     <div class="form-group">
@@ -155,7 +152,7 @@ use App\User;
                     </form>
                 </div>
 
-                <div class="tab-pane" id="settings">
+                <div class="tab-pane" id="edit">
                     <form class="form-horizontal" method="POST" action="{{ route('profile.update', $profiles->id) }}">
                         @csrf
                         {{ method_field('PATCH') }}
