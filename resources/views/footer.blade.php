@@ -1,6 +1,6 @@
 <footer class="bg-light py-5">
     <div class="container">
-        <div class="small text-center text-muted">Copyright &copy; 2019 - Yudho Aerials</div>
+        <div class="small text-center text-muted">Develop By <a href="http://www.instagram.com/yudho.alfantyo" target="_blank"> Yudho Aerials </a></div>
     </div>
 </footer>
 
