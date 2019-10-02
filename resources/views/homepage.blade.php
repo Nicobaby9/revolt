@@ -179,7 +179,7 @@
           <span class="focus-input100"></span>  
         </div>
         <div class="container-contact100-form-btn">
-          <button class="contact100-form-btn" type="submit" value="Post">
+          <button class="contact100-form-btn" type="submit" value="Post" disabled>
             <span>
               <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
               Send
@@ -233,7 +233,7 @@
       <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
         <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
         <div>
-          <a href="https://wa.me/+6282136633826/?text=urlencodedtext" target="_blank">+62 8783-7998-122</a>
+          <a href="https://wa.me/+6282136633826/?text=urlencodedtext" target="_blank">+62 8213-6633-826</a>
         </div>
       </div>
       <div class="col-lg-4 mr-auto text-center">

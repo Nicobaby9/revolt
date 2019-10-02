@@ -1,4 +1,3 @@
-use App\User;
 
 @extends('layouts.master')
 @section('header')
@@ -62,7 +61,7 @@ use App\User;
                     <b>Phone</b> <a class="float-right">{{ auth()->user()->no_handphone }}</a>
                 </li>
                 </ul>
-                <a class="btn btn-primary btn-block"><b>{{ auth()->user()->role }} </b></a>
+                <a class="btn btn-primary btn-block text-white"><b>{{ auth()->user()->role }} </b></a>
             </div>
             <!-- /.card-body -->
             </div>
@@ -171,13 +170,13 @@ use App\User;
                         <input type="email" class="form-control" id="email" name="email" value="{{ $profiles->email }}">
                         </div>
                     </div>
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <label for="password" class="col-sm-2 control-label">Password</label>
 
                         <div class="col-sm-10">
-                        <input type="password" class="form-control" id="password" value="{{ auth()->user()->password }}">
+                        <input type="password" class="form-control" id="password" value="{{ $profiles->password }}">
                         </div>
-                    </div> --}}
+                    </div>
                     <div class="form-group">
                         <label for="role" class="col-sm-2 control-label">Role</label>
 
