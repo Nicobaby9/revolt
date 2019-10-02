@@ -12,6 +12,8 @@
 */
 
 use App\Product;
+// use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PageController@index');
 
@@ -41,7 +43,6 @@ Auth::routes();
 
 // Route::get('/', 'HomeController@index')->name('home');
 
-
 Route::group(['prefix' => '/6661/admin', 'middleware'=> 'auth'], function() {
     
     Route::resource('home', 'HomeController');
@@ -51,6 +52,10 @@ Route::group(['prefix' => '/6661/admin', 'middleware'=> 'auth'], function() {
     ]);
 
     Route::resource('profile', 'adminController\ProfileController')->only([
+        'index', 'edit', 'update'
+    ]);
+    
+    Route::resource('about-company', 'adminController\AboutCompanyController')->only([
         'index', 'edit', 'update'
     ]);
     

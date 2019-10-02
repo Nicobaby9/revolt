@@ -6,20 +6,19 @@
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
-    <div class="row mb-2">
-        <div class="col-sm-6">
-        <h1 class="m-0 text-dark">Profile Page</h1>
-        </div><!-- /.col -->
-        <div class="col-sm-6">
-        <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="{{ route('profile.index') }}">Profile</a></li>
-            <li class="breadcrumb-item active">Index</li>
-        </ol>
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Profile Page</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="{{ route('profile.index') }}">Profile</a></li>
+                    <li class="breadcrumb-item active">Index</li>
+                </ol>
+            </div>
         </div>
     </div>
-    </div><!-- /.container-fluid -->
 </div>
-<!-- /.content-header -->
 
 @endsection
 
@@ -69,159 +68,159 @@
 
         <div class="col-md-9">
             <div class="card">
-            <div class="card-header p-2">
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="#detail" data-toggle="tab">Detail</a></li>
-                    <li class="nav-item"><a class="nav-link " href="#edit" data-toggle="tab">Edit</a></li>
-                </ul>
-            </div>
-            <div class="card-body">
-                <div class="tab-content">
-                    <div class="active tab-pane active" id="detail">
-                        <form class="form-horizontal" method="POST">
-                        @csrf
-                        {{ method_field('PATCH') }}
-                        <div class="form-group">
-                            <label for="name" class="col-sm-2 control-label">Name</label>
-
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="name" name="name" value="{{ $profiles->name }}" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="col-sm-2 control-label">Email</label>
-
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="email" name="email" value="{{ $profiles->email }}" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-sm-2 control-label">Password</label>
-
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="password" value="{{ auth()->user()->password }}" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="role" class="col-sm-2 control-label">Role</label>
-
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="role" name="role" value="{{ $profiles->role }}" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="description" class="col-sm-2 control-label">Description</label>
-
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="description" name="description" value="{{ $profiles->description }}" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="instagram" class="col-sm-2 control-label">Instagram</label>
-
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="instagram" name="instagram" value="{{ $profiles->instagram }}" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="facebook" class="col-sm-2 control-label">Facebook</label>
-
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="facebook" name="facebook" value="{{ $profiles->facebook }}" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="github" class="col-sm-2 control-label">Github</label>
-
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="github" name="github" value="{{ $profiles->github }}" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="no_handphone" class="col-sm-2 control-label">Handphone</label>
-
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="no_hanphone" name="no_handphone" value="{{ $profiles->no_handphone }}" disabled>
-                            </div>
-                        </div>
-                        </form>
-                    </div>
-
-                    <div class="tab-pane" id="edit">
-                        <form class="form-horizontal" method="POST" action="{{ route('profile.update', $profiles->id) }}">
+                <div class="card-header p-2">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a class="nav-link active" href="#detail" data-toggle="tab">Detail</a></li>
+                        <li class="nav-item"><a class="nav-link " href="#edit" data-toggle="tab">Edit</a></li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="active tab-pane active" id="detail">
+                            <form class="form-horizontal" method="POST">
                             @csrf
                             {{ method_field('PATCH') }}
-                            <input type="hidden" name="_method" value="PATCH">
-                        <div class="form-group">
-                            <label for="name" class="col-sm-2 control-label">Name</label>
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label">Name</label>
 
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="name" name="name" value="{{ $profiles->name }}">
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="name" name="name" value="{{ $profiles->name }}" disabled>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="col-sm-2 control-label">Email</label>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-2 control-label">Email</label>
 
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="email" name="email" value="{{ $profiles->email }}">
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email" name="email" value="{{ $profiles->email }}" disabled>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-sm-2 control-label">Password</label>
+                            <div class="form-group">
+                                <label for="password" class="col-sm-2 control-label">Password</label>
 
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="password" value="{{ $profiles->password }}">
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="password" value="{{ auth()->user()->password }}" disabled>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="role" class="col-sm-2 control-label">Role</label>
+                            <div class="form-group">
+                                <label for="role" class="col-sm-2 control-label">Role</label>
 
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="role" name="role" value="{{ $profiles->role }}">
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="role" name="role" value="{{ $profiles->role }}" disabled>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="description" class="col-sm-2 control-label">Description</label>
+                            <div class="form-group">
+                                <label for="description" class="col-sm-2 control-label">Description</label>
 
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="description" name="description" value="{{ $profiles->description }}">
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="description" name="description" value="{{ $profiles->description }}" disabled>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="instagram" class="col-sm-2 control-label">Instagram</label>
+                            <div class="form-group">
+                                <label for="instagram" class="col-sm-2 control-label">Instagram</label>
 
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="instagram" name="instagram" value="{{ $profiles->instagram }}">
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="instagram" name="instagram" value="{{ $profiles->instagram }}" disabled>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="facebook" class="col-sm-2 control-label">Facebook</label>
+                            <div class="form-group">
+                                <label for="facebook" class="col-sm-2 control-label">Facebook</label>
 
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="facebook" name="facebook" value="{{ $profiles->facebook }}">
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="facebook" name="facebook" value="{{ $profiles->facebook }}" disabled>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="github" class="col-sm-2 control-label">Github</label>
+                            <div class="form-group">
+                                <label for="github" class="col-sm-2 control-label">Github</label>
 
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="github" name="github" value="{{ $profiles->github }}">
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="github" name="github" value="{{ $profiles->github }}" disabled>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="no_handphone" class="col-sm-2 control-label">Handphone</label>
+                            <div class="form-group">
+                                <label for="no_handphone" class="col-sm-2 control-label">Handphone</label>
 
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="no_hanphone" name="no_handphone" value="{{ $profiles->no_handphone }}">
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="no_hanphone" name="no_handphone" value="{{ $profiles->no_handphone }}" disabled>
+                                </div>
                             </div>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary" value="Post">Submit</button>
+
+                        <div class="tab-pane" id="edit">
+                            <form class="form-horizontal" method="POST" action="{{ route('profile.update', $profiles->id) }}">
+                                @csrf
+                                {{ method_field('PATCH') }}
+                                <input type="hidden" name="_method" value="PATCH">
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label">Name</label>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="name" name="name" value="{{ $profiles->name }}">
+                                </div>
                             </div>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-2 control-label">Email</label>
+
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email" name="email" value="{{ $profiles->email }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-sm-2 control-label">Password</label>
+
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="password" value="{{ $profiles->password }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="role" class="col-sm-2 control-label">Role</label>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="role" name="role" value="{{ $profiles->role }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="description" class="col-sm-2 control-label">Description</label>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="description" name="description" value="{{ $profiles->description }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="instagram" class="col-sm-2 control-label">Instagram</label>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="instagram" name="instagram" value="{{ $profiles->instagram }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="facebook" class="col-sm-2 control-label">Facebook</label>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="facebook" name="facebook" value="{{ $profiles->facebook }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="github" class="col-sm-2 control-label">Github</label>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="github" name="github" value="{{ $profiles->github }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="no_handphone" class="col-sm-2 control-label">Handphone</label>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="no_hanphone" name="no_handphone" value="{{ $profiles->no_handphone }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" value="Post">Submit</button>
+                                </div>
+                            </div>
+                            </form>
                         </div>
-                        </form>
-                    </div>
                     <!-- /.tab-pane -->
                     </div>
                     <!-- /.tab-content -->
