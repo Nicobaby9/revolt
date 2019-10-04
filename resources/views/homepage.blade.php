@@ -9,10 +9,7 @@
       <div class="col-lg-8 text-center">
         <h2 class="text-white mt-0">Profil Revolt Factory</h2>
         <hr class="divider light my-4">
-        <p class="text-white-50 mb-4">Kami telah melayani kebutuhan konsumen Kaos dan Kemeja di Indonesia sejak tahun 2013.
-            Produk konveksi yang dipesan akan kami produksi sesuai dengan permintaan dan kebutuhan Anda.
-            Pesanan Anda akan dikerjakan secara profesional oleh para tenaga kerja berpengalaman.
-            Semoga Bapak/Ibu sekalian berkenan menjalin kerja sama dengan kami.</p>
+        <p class="text-white-50 mb-4">{{ $about->company_profile }}</p>
         <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
       </div>
     </div>
@@ -32,30 +29,29 @@
       <div class="col-lg-3 col-md-6 text-center">
         <div class="mt-5">
           <i class="fas fa-4x fa-industry text-warning mb-4"></i>
-          <h3 class="h4 mb-2">Garment Industry</h3>
-          <p class="text-muted mb-0">Our company are always following fashion update and trends.
-          </p>
+          <h3 class="h4 mb-2">{{ $about->atOurServices_first_title }}</h3>
+          <p class="text-muted mb-0">{{ $about->atOurServices_first_desc }}</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 text-center">
         <div class="mt-5">
           <i class="fas fa-4x fa-tags text-warning mb-4"></i>
-          <h3 class="h4 mb-2">Save Your Money</h3>
-          <p class="text-muted mb-0">You can make an order with low price but have good quality.</p>
+          <h3 class="h4 mb-2">{{ $about->atOurServices_second_title }}</h3>
+          <p class="text-muted mb-0">{{ $about->atOurServices_second_desc }}.</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 text-center">
         <div class="mt-5">
           <i class="fas fa-4x fa-edit text-warning mb-4"></i>
-          <h3 class="h4 mb-2">Easy Design</h3>
-          <p class="text-muted mb-0">You can this design as is, or you can make changes!</p>
+          <h3 class="h4 mb-2">{{ $about->atOurServices_third_title }}</h3>
+          <p class="text-muted mb-0">{{ $about->atOurServices_third_desc }}</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 text-center">
         <div class="mt-5">
           <i class="fas fa-4x fa-heart text-warning mb-4"></i>
-          <h3 class="h4 mb-2">Made with Love</h3>
-          <p class="text-muted mb-0">we always made the product with love?</p>
+          <h3 class="h4 mb-2">{{ $about->atOurServices_fourth_title }}</h3>
+          <p class="text-muted mb-0">{{ $about->atOurServices_fourth_desc }}</p>
         </div>
       </div>
     </div>

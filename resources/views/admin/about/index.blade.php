@@ -36,76 +36,100 @@
                 <form class="form-horizontal" method="POST">
                 @csrf
                 {{ method_field('PATCH') }}
+                {{--  COMPANY NAME / PROFILE  --}}
                 <div class="form-group">
-                    <label for="name" class="col-sm-2 control-label">Name</label>
+                    <label for="company_profile" class="col-sm-2 control-label">Company Profile</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" name="name" value="{{ auth()->user()->name }}" disabled>
+                        <textarea class="form-control" rows="6" cols="20" id="company_profile" name="company_profile" disabled> {{ $about->company_profile }} </textarea>
+                        {{--  <input type="textarea" class="form-control" id="company_profile" name="company_profile" value="" disabled>  --}}
+                    </div>
+                </div>
+                {{--  AT OUR SERVICES CONTENT  --}}
+
+                {{--  FIRST CONTENT  --}}
+                <div class="form-group">
+                    <label for="atOurServices_first_title" class="col-sm-3 control-label">First AtOurService Title</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="atOurServices_first_title" name="atOurServices_first_title" value="{{ $about->atOurServices_first_title }}" disabled>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <label for="atOurServices_first_desc" class="col-sm-3 control-label">First AtOurService Desc</label>
 
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->name }}" disabled>
+                        <input type="text" class="form-control" id="atOurServices_first_desc" name="atOurServices_first_desc" value="{{ $about->atOurServices_first_desc }}" disabled>
+                    </div>
+                </div>
+                {{--  SECOND CONTENT  --}}
+                <div class="form-group">
+                    <label for="atOurServices_second_title" class="col-sm-3 control-label">Second AtOurService Title</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="atOurServices_second_title" name="atOurServices_second_title" value="{{ $about->atOurServices_second_title }}" disabled>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="password" class="col-sm-2 control-label">Password</label>
+                    <label for="atOurServices_second_desc" class="col-sm-3 control-label">Second AtOurService Desc</label>
 
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="password" value="{{ auth()->user()->password }}" disabled>
+                        <input type="text" class="form-control" id="atOurServices_second_desc" name="atOurServices_second_desc" value="{{ $about->atOurServices_second_desc }}" disabled>
+                    </div>
+                </div>
+                {{--  THIRD CONTENT  --}}
+                <div class="form-group">
+                    <label for="atOurServices_third_title" class="col-sm-3 control-label">Third AtOurService Title</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="atOurServices_third_title" name="atOurServices_third_title" value="{{ $about->atOurServices_third_title }}" disabled>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="role" class="col-sm-2 control-label">Role</label>
+                    <label for="atOurServices_third_desc" class="col-sm-3 control-label">Third AtOurService Desc</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="role" name="role" value="{{ auth()->user()->name }}" disabled>
+                        <input type="text" class="form-control" id="atOurServices_third_desc" name="atOurServices_third_desc" value="{{ $about->atOurServices_third_desc }}" disabled>
+                    </div>
+                </div>
+                {{--  FOURTH CONTENT  --}}
+                <div class="form-group">
+                    <label for="atOurServices_fourth_title" class="col-sm-2 control-label">Fourth AtOurService Title</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="atOurServices_fourth_title" name="atOurServices_fourth_title" value="{{ $about->atOurServices_fourth_title }}" disabled>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="description" class="col-sm-2 control-label">Description</label>
+                    <label for="atOurServices_fourth_desc" class="col-sm-2 control-label">Fourth AtOurService Desc</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="description" name="description" value="{{ auth()->user()->name }}" disabled>
+                        <input type="text" class="form-control" id="atOurServices_fourth_desc" name="atOurServices_fourth_desc" value="{{ $about->atOurServices_fourth_desc }}" disabled>
                     </div>
                 </div>
+                {{--  WhatsApp Link API  --}}
                 <div class="form-group">
-                    <label for="instagram" class="col-sm-2 control-label">Instagram</label>
+                    <label for="contact_us_wa_link" class="col-sm-2 control-label">WhatsApp Link API</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="instagram" name="instagram" value="{{ auth()->user()->name }}" disabled>
+                        <input type="text" class="form-control" id="contact_us_wa_link" name="contact_us_wa_link" value="{{ $about->contact_us_wa_link }}" disabled>
                     </div>
                 </div>
+                {{--  Instagram Link API  --}}
                 <div class="form-group">
-                    <label for="facebook" class="col-sm-2 control-label">Facebook</label>
+                    <label for="contact_us_instagram_link" class="col-sm-2 control-label">Instagram Link API</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="facebook" name="facebook" value="{{ auth()->user()->name }}" disabled>
+                        <input type="text" class="form-control" id="contact_us_instagram_link" name="contact_us_instagram_link" value="{{ $about->contact_us_instagram_link }}" disabled>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="github" class="col-sm-2 control-label">Github</label>
-
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="github" name="github" value="{{ auth()->user()->name }}" disabled>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="no_handphone" class="col-sm-2 control-label">Handphone</label>
-
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="no_hanphone" name="no_handphone" value="{{ auth()->user()->name }}" disabled>
-                    </div>
-                </div>
-                <div class="form-group">
+                {{--  <div class="form-group">
                     <label for="textarea" class="control-label col-sm-2">Textarea</label>
 
                     <div class="col-sm-10"> 
                         <textarea class="form-control" rows="3" cols="20" value="" disabled></textarea>
                     </div>
-                </div>
+                </div>  --}}
                 </form>
             </div>
 
@@ -114,74 +138,91 @@
                     @csrf
                     {{ method_field('PATCH') }}
                     <input type="hidden" name="_method" value="PATCH">
+                {{--  AT OUR SERVICES CONTENT  --}}
+
+                {{--  COMPANY NAME / PROFILE  --}}
                 <div class="form-group">
-                    <label for="name" class="col-sm-2 control-label">Name</label>
+                    <label for="company_profile" class="col-sm-2 control-label">Company Profile</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" name="name" value="{{ auth()->user()->name }}">
+                        <textarea class="form-control" rows="6" cols="20" id="company_profile" name="company_profile"> {{ $about->company_profile }} </textarea>
+                    </div>
+                </div>
+
+                {{--  FIRST CONTENT  --}}
+                <div class="form-group">
+                    <label for="atOurServices_first_title" class="col-sm-3 control-label">First AtOurService Title</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="atOurServices_first_title" name="atOurServices_first_title" value="{{ $about->atOurServices_first_title }}">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <label for="atOurServices_first_desc" class="col-sm-3 control-label">First AtOurService Desc</label>
 
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->name }}">
+                        <input type="text" class="form-control" id="atOurServices_first_desc" name="atOurServices_first_desc" value="{{ $about->atOurServices_first_desc }}">
+                    </div>
+                </div>
+                {{--  SECOND CONTENT  --}}
+                <div class="form-group">
+                    <label for="atOurServices_second_title" class="col-sm-3 control-label">Second AtOurService Title</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="atOurServices_second_title" name="atOurServices_second_title" value="{{ $about->atOurServices_second_title }}">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="password" class="col-sm-2 control-label">Password</label>
+                    <label for="atOurServices_second_desc" class="col-sm-3 control-label">Second AtOurService Desc</label>
 
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="password" value="{{ auth()->user()->name }}">
+                        <input type="text" class="form-control" id="atOurServices_second_desc" name="atOurServices_second_desc" value="{{ $about->atOurServices_second_desc }}">
+                    </div>
+                </div>
+                {{--  THIRD CONTENT  --}}
+                <div class="form-group">
+                    <label for="atOurServices_third_title" class="col-sm-3 control-label">Third AtOurService Title</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="atOurServices_third_title" name="atOurServices_third_title" value="{{ $about->atOurServices_third_title }}">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="role" class="col-sm-2 control-label">Role</label>
+                    <label for="atOurServices_third_desc" class="col-sm-3 control-label">Third AtOurService Desc</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="role" name="role" value="{{ auth()->user()->name }}">
+                        <input type="text" class="form-control" id="atOurServices_third_desc" name="atOurServices_third_desc" value="{{ $about->atOurServices_third_desc }}">
+                    </div>
+                </div>
+                {{--  FOURTH CONTENT  --}}
+                <div class="form-group">
+                    <label for="atOurServices_fourth_title" class="col-sm-2 control-label">Fourth AtOurService Title</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="atOurServices_fourth_title" name="atOurServices_fourth_title" value="{{ $about->atOurServices_fourth_title }}">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="description" class="col-sm-2 control-label">Description</label>
+                    <label for="atOurServices_fourth_desc" class="col-sm-2 control-label">Fourth AtOurService Desc</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="description" name="description" value="{{ auth()->user()->name }}">
+                        <input type="text" class="form-control" id="atOurServices_fourth_desc" name="atOurServices_fourth_desc" value="{{ $about->atOurServices_fourth_desc }}">
                     </div>
                 </div>
+                {{--  WhatsApp Link API  --}}
                 <div class="form-group">
-                    <label for="instagram" class="col-sm-2 control-label">Instagram</label>
+                    <label for="contact_us_wa_link" class="col-sm-2 control-label">WhatsApp Link API</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="instagram" name="instagram" value="{{ auth()->user()->name }}">
+                        <input type="text" class="form-control" id="contact_us_wa_link" name="contact_us_wa_link" value="{{ $about->contact_us_wa_link }}">
                     </div>
                 </div>
+                {{--  Instagram Link API  --}}
                 <div class="form-group">
-                    <label for="facebook" class="col-sm-2 control-label">Facebook</label>
+                    <label for="contact_us_instagram_link" class="col-sm-2 control-label">Instagram Link API</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="facebook" name="facebook" value="{{ auth()->user()->name }}">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="github" class="col-sm-2 control-label">Github</label>
-
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="github" name="github" value="{{ auth()->user()->name }}">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="no_handphone" class="col-sm-2 control-label">Handphone</label>
-
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="no_hanphone" name="no_handphone" value="{{ auth()->user()->name }}">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="textarea" class="control-label col-sm-2">Textarea</label>
-
-                    <div class="col-sm-10"> 
-                        <textarea class="form-control" rows="3" cols="20" value="" disabled></textarea>
+                        <input type="text" class="form-control" id="contact_us_instagram_link" name="contact_us_instagram_link" value="{{ $about->contact_us_instagram_link }}">
                     </div>
                 </div>
                 <div class="form-group">
