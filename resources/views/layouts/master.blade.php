@@ -179,7 +179,7 @@
       <div class="float-right d-none d-sm-inline">
         
       </div>
-    <strong>Copyright &copy; 2019 <a href="https://github.com/Nicobaby9">Yudho Aerials</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2019 <a href="https://github.com/Nicobaby9" target="_blank">Yudho Aerials</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->

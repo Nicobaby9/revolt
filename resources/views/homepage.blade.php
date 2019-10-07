@@ -229,7 +229,7 @@
       <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
         <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
         <div>
-          <a href="https://wa.me/+6282136633826/?text=urlencodedtext" target="_blank">+62 8213-6633-826</a>
+          <a href="{{ $about->contact_us_wa_link }}" target="_blank">+62 8213-6633-826</a>
         </div>
       </div>
       <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
@@ -242,7 +242,7 @@
       <div class="col-lg-4 mr-auto text-center">
         <i class="fab fa-instagram fa-3x mb-3 text-muted"></i>
         <!-- Make sure to change the email address in anchor text AND the link below! -->
-        <a class="d-block" href="http://www.instagram.com/rvlt_factory.print" target="_blank">@rvlt_factory.print</a>
+        <a class="d-block" href="{{ $about->contact_us_instagram_link }}" target="_blank">@rvlt_factory.print</a>
       </div>
     </div>
   </div>

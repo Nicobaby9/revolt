@@ -38,7 +38,7 @@
                 {{ method_field('PATCH') }}
                 {{--  COMPANY NAME / PROFILE  --}}
                 <div class="form-group">
-                    <label for="company_profile" class="col-sm-2 control-label">Company Profile</label>
+                    <label for="company_profile" class="col-sm-3 control-label">Company Profile</label>
 
                     <div class="col-sm-10">
                         <textarea class="form-control" rows="6" cols="20" id="company_profile" name="company_profile" disabled> {{ $about->company_profile }} </textarea>
@@ -94,14 +94,14 @@
                 </div>
                 {{--  FOURTH CONTENT  --}}
                 <div class="form-group">
-                    <label for="atOurServices_fourth_title" class="col-sm-2 control-label">Fourth AtOurService Title</label>
+                    <label for="atOurServices_fourth_title" class="col-sm-3 control-label">Fourth AtOurService Title</label>
 
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="atOurServices_fourth_title" name="atOurServices_fourth_title" value="{{ $about->atOurServices_fourth_title }}" disabled>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="atOurServices_fourth_desc" class="col-sm-2 control-label">Fourth AtOurService Desc</label>
+                    <label for="atOurServices_fourth_desc" class="col-sm-3 control-label">Fourth AtOurService Desc</label>
 
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="atOurServices_fourth_desc" name="atOurServices_fourth_desc" value="{{ $about->atOurServices_fourth_desc }}" disabled>
@@ -109,7 +109,7 @@
                 </div>
                 {{--  WhatsApp Link API  --}}
                 <div class="form-group">
-                    <label for="contact_us_wa_link" class="col-sm-2 control-label">WhatsApp Link API</label>
+                    <label for="contact_us_wa_link" class="col-sm-3 control-label">WhatsApp Link API</label>
 
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="contact_us_wa_link" name="contact_us_wa_link" value="{{ $about->contact_us_wa_link }}" disabled>
@@ -117,7 +117,7 @@
                 </div>
                 {{--  Instagram Link API  --}}
                 <div class="form-group">
-                    <label for="contact_us_instagram_link" class="col-sm-2 control-label">Instagram Link API</label>
+                    <label for="contact_us_instagram_link" class="col-sm-3 control-label">Instagram Link API</label>
 
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="contact_us_instagram_link" name="contact_us_instagram_link" value="{{ $about->contact_us_instagram_link }}" disabled>
@@ -134,7 +134,7 @@
             </div>
 
             <div class="tab-pane" id="edit">
-                <form class="form-horizontal" method="POST" action="{{ route('profile.update', auth()->user()->name) }}">
+                <form class="form-horizontal" method="POST" action="{{ route('about-company.update', $about->id ) }}">
                     @csrf
                     {{ method_field('PATCH') }}
                     <input type="hidden" name="_method" value="PATCH">
@@ -142,10 +142,10 @@
 
                 {{--  COMPANY NAME / PROFILE  --}}
                 <div class="form-group">
-                    <label for="company_profile" class="col-sm-2 control-label">Company Profile</label>
+                    <label for="company_profile" class="col-sm-3 control-label">Company Profile</label>
 
                     <div class="col-sm-10">
-                        <textarea class="form-control" rows="6" cols="20" id="company_profile" name="company_profile"> {{ $about->company_profile }} </textarea>
+                        <textarea class="form-control" rows="6" cols="20" id="company_profile" name="company_profile">{{ $about->company_profile }} </textarea>
                     </div>
                 </div>
 
@@ -196,14 +196,14 @@
                 </div>
                 {{--  FOURTH CONTENT  --}}
                 <div class="form-group">
-                    <label for="atOurServices_fourth_title" class="col-sm-2 control-label">Fourth AtOurService Title</label>
+                    <label for="atOurServices_fourth_title" class="col-sm-3 control-label">Fourth AtOurService Title</label>
 
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="atOurServices_fourth_title" name="atOurServices_fourth_title" value="{{ $about->atOurServices_fourth_title }}">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="atOurServices_fourth_desc" class="col-sm-2 control-label">Fourth AtOurService Desc</label>
+                    <label for="atOurServices_fourth_desc" class="col-sm-3 control-label">Fourth AtOurService Desc</label>
 
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="atOurServices_fourth_desc" name="atOurServices_fourth_desc" value="{{ $about->atOurServices_fourth_desc }}">
@@ -211,7 +211,7 @@
                 </div>
                 {{--  WhatsApp Link API  --}}
                 <div class="form-group">
-                    <label for="contact_us_wa_link" class="col-sm-2 control-label">WhatsApp Link API</label>
+                    <label for="contact_us_wa_link" class="col-sm-3 control-label">WhatsApp Link API</label>
 
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="contact_us_wa_link" name="contact_us_wa_link" value="{{ $about->contact_us_wa_link }}">
@@ -219,7 +219,7 @@
                 </div>
                 {{--  Instagram Link API  --}}
                 <div class="form-group">
-                    <label for="contact_us_instagram_link" class="col-sm-2 control-label">Instagram Link API</label>
+                    <label for="contact_us_instagram_link" class="col-sm-3 control-label">Instagram Link API</label>
 
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="contact_us_instagram_link" name="contact_us_instagram_link" value="{{ $about->contact_us_instagram_link }}">

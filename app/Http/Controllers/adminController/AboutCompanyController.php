@@ -15,7 +15,7 @@ class AboutCompanyController extends Controller
      */
     public function index()
     {
-        $about = AboutCompany::all();
+        $about = AboutCompany::all()->first();
         return view('admin.about.index', compact('about'));
     }
 
@@ -71,7 +71,10 @@ class AboutCompanyController extends Controller
      */
     public function update(Request $request, AboutCompany $aboutCompany)
     {
-        //
+        $about = AboutCompany::all()->first();
+        $about->update($request->all());
+        
+        return redirect()->back();
     }
 
     /**

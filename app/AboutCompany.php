@@ -15,8 +15,8 @@ class AboutCompany extends Model
         'atOurServices_third_title',
         'atOurServices_third_desc',
         'atOurServices_fourth_title',
-        'atOurServices_fourth_title',
+        'atOurServices_fourth_desc',
         'contact_us_wa_link',
-        'contact_use_instagram_link'
+        'contact_us_instagram_link'
     ];
 }
